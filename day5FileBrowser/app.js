@@ -266,6 +266,11 @@ function deleteFileOrFolder() {
     }
 }
 
+/**
+ * Searches recursively for all subdirectories and files in specified directory.
+ * @param indexInFsStorage - index of the directory in fsStorage.
+ * @return Array of indexes of all subdirectories and files.
+ * */
 function findAllSubdirAndFiles(indexInFsStorage) {
     var folderContent = getDirectoryContentIndexes((fsStorage[indexInFsStorage])[0]);
     var results = [].concat(folderContent);
